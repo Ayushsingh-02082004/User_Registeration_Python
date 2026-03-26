@@ -23,6 +23,11 @@ class Validator:
         pattern = r"^[A-Z][a-z]{3,}$"
         return re.match(pattern ,name)
     
+    @staticmethod
+    def validate_email(email):
+        pattern = r"^[\w]+(\.[\w]+)@[\w]+\.[\w]"
+        return re.match(pattern , email)
+    
 
 
 def get_input(field, validation_func, error_message):
@@ -47,9 +52,12 @@ def main():
         "Last name should start with a capital letter and should have at least 3 characters"
     )
 
+    email = get_input("Email" ,Validator.validate_email,"Enter like ayush.singh@bridgelabz.com");
+
     user = User(firstname , lastname)
     print("\nUser Registered Successfully!")
     print(user)
+    print(f"Email : {email}")
 
 
 if __name__ == "__main__":
