@@ -2,7 +2,8 @@ import re
 
 class Validator:
     NAME_PATTERN = r"^[A-Z][a-z]{3,}$"
-    EMAIL_PATTERN = r"^[\w]+(\.[\w]+)@[a-zA-Z]+\.[\w]"
+    # EMAIL_PATTERN = r"^[\w]+(\.[\w]+)@[a-zA-Z]+\.[\w]"
+    EMAIL_PATTERN =  r'^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(\.[a-zA-Z]{2,3}){1,2}$'
     PHONE_PATTERN = r'^[0-9]{2}\s[0-9]{10}$'
     PASSWORD_PATTERN = r'^(?=.*[A-Z])(?=.*[0-9])(?=[^!@#$%^&*]*[!@#$%^&*][^!@#$%^&*]*$).{8,}$'
 
