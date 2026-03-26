@@ -4,7 +4,7 @@ class Validator:
     NAME_PATTERN = r"^[A-Z][a-z]{3,}$"
     EMAIL_PATTERN = r"^[\w]+(\.[\w]+)@[a-zA-Z]+\.[\w]"
     PHONE_PATTERN = r'^[0-9]{2}\s[0-9]{10}$'
-    PASSWORD_PATTERN = r'^.{8,}$'
+    PASSWORD_PATTERN = r'^(?=.*[A-Z]).{8,}$'
 
     
     @staticmethod
